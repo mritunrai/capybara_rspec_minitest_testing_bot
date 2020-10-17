@@ -12,8 +12,4 @@ describe "the signin process", type: :feature do
             @session.fill_in 'q', with: 'user@example.com'
             @session.click_button 'btnK'    
     end
-
-      after :each do
-        @session.quit
-      end
 end
