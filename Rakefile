@@ -1,29 +1,25 @@
-require 'rubygems'
-require 'cucumber'
-require 'cucumber/rake/task'
-require 'rake/clean'
-CLEAN.include('*.tmp')
-CLOBBER.include('*.tmp', 'build/*')
+require "rubygems"
+require "cucumber"
+require "cucumber/rake/task"
+require "rake/clean"
+CLEAN.include("*.tmp")
+CLOBBER.include("*.tmp", "build/*")
 
-  task :runCucumberTest, [:arg1, :arg2] do |t, args|
-    puts "Args were: #{args} of class #{args.class}"
-    puts "arg1 was: '#{args[:arg1]}' of class #{args[:arg1].class}"
-    puts "arg2 was: '#{args[:arg2]}' of class #{args[:arg2].class}"
-    puts "arg1 was: '#{args[:arg1]}' of class #{args[:arg1].class}"
-    puts "arg2 was: '#{args[:arg2]}' of class #{args[:arg2].class}"
+Cucumber::Rake::Task.new(:run_features, "This is my cucumber rake task") do |t, args|
+  #t.profile = "runCucumberTest"
 
+  t.cucumber_opts = %w{--tags @smoke}    # comment above line of code to use this.
+end
 
-    ENV['BROWSER'] = args.arg1
+task :runCucumberTest, [:arg1] do |t, args|
+  puts "Args were: #{args} of class #{args.class}"
+  puts "arg1 was: '#{args[:arg1]}' of class #{args[:arg1].class}"
 
-    puts "Env browse name, #{args.arg1}."
+  ENV["BROWSER"] = args.arg1
 
-    ENV['TAG'] = args.arg2
-    
-    puts "Env Tag name, #{args.arg2}."
+  puts "Env browse name, #{args.arg1}"
 
-    Rake::Task[:run_features].execute()
-	
-  end
+  Rake::Task[:run_features].invoke()
+end
 
-Cucumber::Rake::Task.new(:run_features)
 task :default => [:runCucumberTest]

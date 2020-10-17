@@ -11,6 +11,11 @@ Setup for Capybara with Cucumber
 
 Running Cucumber test
 $cucumber --tag @run
+$cucumber feature/githubhome.feature  // Running specific feature file.
+
+Running Cucumber test using Rake task
+$rake 'runCucumberTest['mk','@smoke']'    // This command is for zsh shell , there are some issue to run rake task on zsh shell.
+$rake  runCucumberTest['mk','@smoke']    // non zsh shell .
 
 Running Rspec Test
 $rspec spec/*.rb   // run all test in ruby files.
