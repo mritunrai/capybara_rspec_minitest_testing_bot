@@ -6,6 +6,7 @@ Setup for Capybara with Cucumber
 5. cucumber --init    // Initialize cucumber project directory
 6. rspec --init       // Initialize rspec project directory
 7. bundle init
+8. gem 'capybara-minitest' // for 
 
 
 
