@@ -1,7 +1,7 @@
 require "selenium/webdriver"
 require 'capybara'
 require "capybara/cuprite"
-
+#require 'capybara-screenshot/rspec'
 
 
 Capybara.register_driver :chrome do |app|
@@ -14,13 +14,13 @@ Capybara.register_driver :headless_chrome do |app|
   )
 end
 
-# Capybara.javascript_driver = :cuprite
-# Capybara.register_driver(:cuprite) do |app|
-#   Capybara::Cuprite::Driver.new(app, window_size: [1200, 800])
-# end
+Capybara.javascript_driver = :cuprite    
+Capybara.register_driver(:cuprite) do |app|
+  Capybara::Cuprite::Driver.new(app, window_size: [1200, 800])
+end
 
 
-  # session = Capybara::Session.new(:cuprite)
-   session = Capybara::Session.new(:chrome)
+  session = Capybara::Session.new(:cuprite)
+  # session = Capybara::Session.new(:chrome)
   # session.visit("http://www.google.com") 
-# Capybara.javascript_driver = :headless_chrome
+ #Capybara.javascript_driver = :headless_chrome

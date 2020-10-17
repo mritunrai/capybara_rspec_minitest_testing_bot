@@ -31,6 +31,9 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (~> 1.5)
       xpath (~> 3.2)
+    capybara_minitest_spec (1.0.7)
+      capybara (>= 2)
+      minitest (>= 4)
     childprocess (3.0.0)
     cliver (0.3.2)
     concurrent-ruby (1.1.7)
@@ -160,6 +163,7 @@ PLATFORMS
 
 DEPENDENCIES
   capybara
+  capybara_minitest_spec
   cucumber (>= 2.0.0)
   cuprite
   minitest

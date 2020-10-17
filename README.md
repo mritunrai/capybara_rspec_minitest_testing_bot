@@ -10,9 +10,8 @@ Setup for Capybara with Cucumber
 
 
 Running Cucumber test
-$
+$cucumber --tag @run
 
-
-Running Rspec Test:
+Running Rspec Test
 $rspec spec/*.rb   // run all test in ruby files.
 $bundle exec rspec   // Running RSpec tests.

@@ -1,7 +1,7 @@
 require 'capybara/rspec'
 
 require 'spec_helper'
-require 'AmazonHeader'
+#require 'AmazonHeader'
 
 describe "the signin process", type: :feature do
     before :each do

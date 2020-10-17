@@ -4,7 +4,7 @@ require 'spec_helper'
 
 describe "the signin process", type: :feature do
     before :each do
-        @session = Capybara::Session.new(:chrome)
+        @session = Capybara::Session.new(:cuprite)
         @session.visit("http://www.google.com") 
     end
    
