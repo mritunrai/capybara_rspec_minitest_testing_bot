@@ -3,8 +3,12 @@ require "capybara"
 require "cucumber"
 require "rubygems"
 require "capybara/cuprite"
+require "allure-cucumber"
+require "capybara-screenshot/cucumber"
 
 Capybara.threadsafe = true
+
+#include AllureCucumber::DSL
 
 $driver
 
@@ -38,4 +42,16 @@ After do |scenario|
   #   save_page
   # end
   $driver.quit
+end
+
+############    Adding Alure Report   #############
+
+# Allure
+AllureCucumber.configure do |c|
+  c.results_directory = "report/allure-results"
+  c.clean_results_directory = true
+  c.link_tms_pattern = "https://example.org/tms/{}"
+  c.link_issue_pattern = "https://example.org/issue/{}"
+  c.tms_prefix = "TMS_"
+  c.issue_prefix = "ISSUE_"
 end

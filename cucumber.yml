@@ -1,2 +1,3 @@
 default: --publish-quiet
+default: "--format pretty --format AllureCucumber::CucumberFormatter --out report/allure-results"
 runCucumberTest: --no-source --color --format pretty --tags @smoke

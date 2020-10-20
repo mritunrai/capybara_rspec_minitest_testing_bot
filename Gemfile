@@ -24,4 +24,10 @@ gem 'minitest-capybara', '~> 0.9.0'
 gem "minitest-rails-capybara"
 gem "minitest-metadata"
 gem 'minitest-rails-capybara'
+
+##### Screenshot ###############
 gem 'capybara-screenshot'
+
+###Reporting
+gem 'allure-cucumber'
+

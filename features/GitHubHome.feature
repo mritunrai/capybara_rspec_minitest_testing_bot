@@ -1,6 +1,7 @@
 #features/githubhome.feature
 
 @regression
+@SEVERITY:trivial @ISSUE:YZZ-100 @TMS:9901
 Feature: Github homepage
 
   Scenario: Github homepage loads properly

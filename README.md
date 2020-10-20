@@ -28,3 +28,18 @@ A better way to get started with Minitest is to have Bundler create a template p
 $bundle gem myproject
 
 How to Run: $ruby <File path>
+
+
+Allure Reporting Installation
+Add this line to your application's Gemfile:
+
+gem 'allure-cucumber'
+And then execute:
+
+$ bundle
+Or install it yourself as:
+
+$ gem install allure-cucumber
+
+How to create report :
+$allure serve report/allure-results 

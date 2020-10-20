@@ -1,2 +1,2 @@
-# require "capybara-screenshot/minitest"
-# require "minitest/autorun"
+require "capybara-screenshot/minitest"
+require "minitest/autorun"
