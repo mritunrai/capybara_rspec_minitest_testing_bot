@@ -21,3 +21,10 @@ $rake  runCucumberTest['mk','@smoke']    // non zsh shell .
 Running Rspec Test
 $rspec spec/*.rb   // run all test in ruby files.
 $bundle exec rspec   // Running RSpec tests.
+
+Setup Minitest Framework.
+To run a Minitest test, the only setup you really need is to require the autorun file at the beginning of a test file:require 'minitest/autorun'
+A better way to get started with Minitest is to have Bundler create a template project for you.
+$bundle gem myproject
+
+How to Run: $ruby <File path>
