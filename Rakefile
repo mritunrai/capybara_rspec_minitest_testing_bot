@@ -26,13 +26,10 @@ end
 
 task :default => [:runCucumberTest]
 
-# task default: "test"
-
-Rake::TestTask.new(:minitest, "Task is running test cases using minitest") do |t, args|
-  # Rake::TestTask.new do |task|
-  task.pattern = "test/*.rb"
+Rake::TestTask.new(:runMiniTest) do |t|
+  t.pattern = "test/*.rb"
 end
 
-task :runMiniTest, [:arg1] do |t, args|
+task :runMiniTest do |t|
   Rake::TestTask[:minitest].invoke()
 end
