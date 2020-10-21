@@ -6,17 +6,18 @@ require "capybara/cuprite"
 require "allure-cucumber"
 require "capybara-screenshot/cucumber"
 
+World(Capybara::DSL)
+
 Capybara.threadsafe = true
 
-#include AllureCucumber::DSL
-
 $driver
+
+ENV["BROWSER"]
 
 puts(ENV["BROWSER"])
 
 Before do |scenario|
-  Capybara.reset_sessions!
-
+  Capybara.save_path = "screenshot"
   Capybara.register_driver :chrome do |app|
     Capybara::Selenium::Driver.new(app, :browser => :chrome)
   end
@@ -24,7 +25,7 @@ Before do |scenario|
   if ENV["BROWSER"] === "chrome" || ENV["BROWSER"].empty?
     Capybara.default_driver = :chrome
     $driver = Capybara::Session.new(:chrome)
-
+    Capybara.javascript_driver = :chrome
     log("Chrome driver is getting instantiated")
   else
     Capybara.default_driver = :cuprite
@@ -33,15 +34,15 @@ Before do |scenario|
   end
 
   log(ENV["BROWSER"])
-
   log("Driver instacne has been created for Scenarios")
 end
 
 After do |scenario|
-  # if scenario.failed?
-  #   save_page
-  # end
-  $driver.quit
+  if scenario.failed?
+    timestamp = "#{Time.zone.now.strftime("%Y-%m-%d-%H:%M:%S")}"
+  end
+  Capybara.reset_sessions!
+  #$driver.quit
 end
 
 ############    Adding Alure Report   #############
