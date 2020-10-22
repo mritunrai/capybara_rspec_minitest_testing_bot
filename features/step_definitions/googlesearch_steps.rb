@@ -4,10 +4,14 @@ Given(/^I am on the Google homepage$/) do
   visit "http://www.google.com/ncr"
 end
 
-Then(/^I will search for "(.*?)"$/) do |searchText|
+When(/^I will search for "(.*?)"$/) do |searchText|
   fill_in "q", :with => searchText
 end
 
-Then(/^I should see "(.*?)"$/) do |expectedText|
-  expect(page).to have_content("Hi")
+# Then(/^I should see "(.*?)"$/) do |expectedText|
+#   expect(page).to have_content("Hi")
+# end
+
+Then("I should see <{string}>") do |string|
+  expect(page).to have_content(string)
 end

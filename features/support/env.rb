@@ -17,7 +17,7 @@ ENV["BROWSER"]
 puts(ENV["BROWSER"])
 
 #Set default selector as css
-Capybara.default_selector = :css
+# Capybara.default_selector = :css
 
 Before do |scenario|
   Capybara.save_path = "screenshot"
@@ -45,7 +45,6 @@ After do |scenario|
     timestamp = "#{Time.zone.now.strftime("%Y-%m-%d-%H:%M:%S")}"
   end
   Capybara.reset_sessions!
-  #$driver.quit
 end
 
 ############    Adding Alure Report   #############
