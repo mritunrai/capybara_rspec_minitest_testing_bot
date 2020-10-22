@@ -6,6 +6,13 @@ require "rake/testtask"
 
 CLEAN.include("*.tmp")
 CLOBBER.include("*.tmp", "build/*")
+CLEAN.include(".html")
+
+task :default => ["clean"]
+
+task :clean do
+  rm_rf "screenshot/*"
+end
 
 Cucumber::Rake::Task.new(:run_features, "This is my cucumber rake task") do |t, args|
   #t.profile = "runCucumberTest"

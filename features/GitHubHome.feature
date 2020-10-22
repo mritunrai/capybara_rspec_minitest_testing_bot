@@ -1,6 +1,7 @@
 #features/githubhome.feature
 
-@regression
+#@regression
+@smoke
 @SEVERITY:trivial @ISSUE:YZZ-100 @TMS:9901
 Feature: Github homepage
 

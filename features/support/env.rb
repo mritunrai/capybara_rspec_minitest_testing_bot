@@ -16,6 +16,9 @@ ENV["BROWSER"]
 
 puts(ENV["BROWSER"])
 
+#Set default selector as css
+Capybara.default_selector = :css
+
 Before do |scenario|
   Capybara.save_path = "screenshot"
   Capybara.register_driver :chrome do |app|

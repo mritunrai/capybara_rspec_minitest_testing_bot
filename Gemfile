@@ -30,4 +30,3 @@ gem 'capybara-screenshot'
 
 ###Reporting
 gem 'allure-cucumber'
-
