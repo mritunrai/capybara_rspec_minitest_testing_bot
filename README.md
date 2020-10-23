@@ -116,5 +116,8 @@ $ruby test/file_name.rb
 
 ###### Note: Ensure test should have prefix with “test_” , specially in case of creating for minitest.
 
+## Screenshot
+All the failing test cases's screen shot will be save under screenshot folder.
+
 
 
