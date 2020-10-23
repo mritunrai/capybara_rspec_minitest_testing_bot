@@ -30,6 +30,17 @@ Before do |scenario|
     $driver = Capybara::Session.new(:chrome)
     Capybara.javascript_driver = :chrome
     log("Chrome driver is getting instantiated")
+  elsif ENV["BROWSER"]
+    Capybara.default_driver = :firefox
+    Capybara.register_driver :firefox do |app|
+      options = {
+        :js_errors => true,
+        :timeout => 360,
+        :debug => false,
+        :inspector => false,
+      }
+      Capybara::Selenium::Driver.new(app, :browser => :firefox)
+    end
   else
     Capybara.default_driver = :cuprite
     $driver = Capybara::Session.new(:cuprite)

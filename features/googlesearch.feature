@@ -10,7 +10,7 @@ Feature: Google search
 
 	Scenario: Search for capybara
 		Given I am on the Google homepage
-		When I will search for "search"
+		When I will search for <"search">
 		Then I should see <"search">
 		Examples:
 			| search   |

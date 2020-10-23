@@ -4,7 +4,6 @@ require_relative "test_helper"
 
 class HomeSpec < Minitest::Test
   include Capybara::DSL
-  # include Capybara::Screenshot::MiniTestPlugin
 
   def setup
     Capybara.register_driver :selenium do |app|
@@ -15,12 +14,10 @@ class HomeSpec < Minitest::Test
   end
 
   def test_mk
-    puts "hi "
     assert_equal "1", "2"
   end
 
   def test_hello
-    puts "this is mritunjai "
     visit "http://www.github.com"
 
     assert_content "Homepage"
