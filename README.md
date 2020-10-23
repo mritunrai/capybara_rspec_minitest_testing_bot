@@ -50,6 +50,14 @@ $rake 'runCucumberTest['mk']'    // This command is for zsh shell , there are so
 $rake  runCucumberTest['mk']    // non zsh shell .
 ```
 
+## Running Rspec Test
+
+```
+$ rspec spec/*.rb    
+
+$ bundle exec rspec
+```
+
 # Allure Reporting Installation
 
 ###### Add this line to your application's Gemfile
@@ -80,14 +88,6 @@ end
 
 ```
 $allure serve report/allure-results 
-```
-
-## Running Rspec Test
-
-```
-$ rspec spec/*.rb    
-
-$ bundle exec rspec
 ```
 
 ## Setup Minitest Framework.
