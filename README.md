@@ -7,15 +7,16 @@
   - Failed Screenshot
 
 # Setup for Capybara with Cucumber #
+
 ```
 1. $brew cask install chromedriver
 2. $gem install bundler
 3. $gem install cucumber
 4. $gem install rspec
-5. $cucumber --init    // Initialize cucumber project directory
-6. $rspec --init       // Initialize rspec project directory
+5. $cucumber --init         // Initialize cucumber project directory
+6. $rspec --init            // Initialize rspec project directory
 7. $bundle init
-8. $bundle install      // Install dependency mentioned in Gemfile
+8. $bundle install          // Install dependency mentioned in Gemfile
 8. $gem 'capybara-minitest' // for minitest 
 ```
 
@@ -68,8 +69,9 @@ $allure serve report/allure-results
 ```
 
 ## Running Rspec Test
+
 ```
-$rspec spec/*.rb   // run all test in ruby files.
+$rspec spec/*.rb     // run all test in ruby files.
 
 $bundle exec rspec   // Running RSpec tests.
 ```
@@ -91,7 +93,12 @@ test/test_helper.rb
 test/myproject_test.rb
 ```
 
-###### How to Run Test: $ruby test/file_name.rb
+###### How to Run Minitest's
+
+```
+$ruby test/file_name.rb
+```
+
 ###### Note: Ensure test should have prefix with “test_” , specially in case of creating for minitest.
 
 
