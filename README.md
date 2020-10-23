@@ -62,25 +62,24 @@ $allure serve report/allure-results
 $rspec spec/*.rb   // run all test in ruby files.
 $bundle exec rspec   // Running RSpec tests.
 
-# Setup Minitest Framework.
-To run a Minitest test, the only setup you really need is to require the autorun file at the beginning of a test file:require 'minitest/autorun'
-A better way to get started with Minitest is to have Bundler create a template project for you.
+## Setup Minitest Framework.
+- To run a Minitest test, the only setup you really need is to require the autorun file at the beginning of a test
+file:require 'minitest/autorun'
+- A better way to get started with Minitest is to have Bundler create a template project for you.
+```
 $bundle gem myproject
-
-## Setting Up Minitest
-To run a Minitest test, the only setup you really need is to require the autorun file at the beginning of a test file:require 'minitest/autorun'. This is good if you’d like to keep the code small. A better way to get started with Minitest is to have Bundler create a template project for you.
-
+```
 ###### bundle gem myproject
 
 There are three files generated that are specifically for your test suite:
-
+```
 Rakefile
 test/test_helper.rb
 test/myproject_test.rb
+```
 
-The Rakefile maps what files should be included when you run your tests viarake. Update the three lines in the gemspec file myproject.gemspec that have TODO written in them (you may delete the homepage line if you wish), and this will allow you to run your tests. You can simply runrakeon the command line orrake test
+###### How to Run Test: $ruby <File path>
+###### Note: Ensure test should have prefix with “test_” , specially in case of creating for minitest.
 
-Note: Ensure test should have prefix with “test_” , specially in case of creating for minitest.
 
-How to Run Test: $ruby <File path>
 
