@@ -11,18 +11,22 @@ gem "webdrivers"
 gem "cucumber", ">=2.0.0"
 gem "rspec"
 gem "rspec-core"
-gem "minitest"
 gem "capybara"
 gem "require_all"
 gem "rake"
 gem "webdrivers"
 gem "selenium-webdriver"
 gem "cuprite"
-gem "capybara_minitest_spec"
-gem "capybara-minitest"
 
 #####Gem for Minitest  ############
-gem "minitest-rails"
+gem "minitest"
+gem 'minitest-capybara', '~> 0.9.0'
 gem "minitest-rails-capybara"
-gem "minitest-colorize"
-gem "minitest-focus"
+gem "minitest-metadata"
+gem 'minitest-rails-capybara'
+
+##### Screenshot ###############
+gem 'capybara-screenshot'
+
+###Reporting
+gem 'allure-cucumber'

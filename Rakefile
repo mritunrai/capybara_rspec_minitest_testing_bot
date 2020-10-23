@@ -2,8 +2,17 @@ require "rubygems"
 require "cucumber"
 require "cucumber/rake/task"
 require "rake/clean"
+require "rake/testtask"
+
 CLEAN.include("*.tmp")
 CLOBBER.include("*.tmp", "build/*")
+CLEAN.include(".html")
+
+task :default => ["clean"]
+
+task :clean do
+  rm_rf "screenshot/*"
+end
 
 Cucumber::Rake::Task.new(:run_features, "This is my cucumber rake task") do |t, args|
   #t.profile = "runCucumberTest"
@@ -23,3 +32,11 @@ task :runCucumberTest, [:arg1] do |t, args|
 end
 
 task :default => [:runCucumberTest]
+
+Rake::TestTask.new(:runMiniTest) do |t|
+  t.pattern = "test/*.rb"
+end
+
+task :runMiniTest do |t|
+  Rake::TestTask[:minitest].invoke()
+end
