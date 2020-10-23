@@ -16,12 +16,12 @@ Before do |scenario|
     Capybara::Selenium::Driver.new(app, :browser => :chrome)
   end
 
-  if ENV["BROWSER"] === "chrome" || ENV["BROWSER"].empty?
+  if ENV["BROWSER"] == "chrome"
     Capybara.default_driver = :chrome
     $driver = Capybara::Session.new(:chrome)
     Capybara.javascript_driver = :chrome
     log("Chrome driver is getting instantiated")
-  elsif ENV["BROWSER"]
+  elsif ENV["BROWSER"] == "firefox"
     Capybara.default_driver = :firefox
     Capybara.register_driver :firefox do |app|
       options = {

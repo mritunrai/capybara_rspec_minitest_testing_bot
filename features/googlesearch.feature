@@ -5,14 +5,17 @@ Feature: Google search
 
 	Scenario: Search for webdriver
 		Given I am on the Google homepage
-		When I will search for "webdriver"
-		Then I should see "webdriver"
+		When I will enter for "webdriver"
+		Then I should see for "webdriver"
 
-	Scenario: Search for capybara
+	Scenario Outline: Search for capybara
+
 		Given I am on the Google homepage
-		When I will search for <"search">
-		Then I should see <"search">
-		Examples:
-			| search   |
-			| webdriver|
-			| github   |
+		When I will enter for "<search>"
+		Then I should see for "<result>"
+
+		Examples: google outline examples description
+			| search    | result    |
+			| webdriver | webdriver |
+			| amazon    | amazon    |
+

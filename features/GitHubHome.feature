@@ -1,5 +1,5 @@
 #features/githubhome.feature
-@smoke
+@regression
 @SEVERITY:trivial @ISSUE:YZZ-100 @TMS:9901
 Feature: Github homepage
 

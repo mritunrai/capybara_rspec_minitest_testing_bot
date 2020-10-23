@@ -10,7 +10,7 @@ class HomeSpec < Minitest::Test
       Capybara::Selenium::Driver.new(app, :browser => :chrome)
     end
     Capybara.default_driver = :selenium_chrome
-    # Capybara.save_path = "test/tmp"
+    Capybara.save_path = "screenshot/"
   end
 
   def test_mk
