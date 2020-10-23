@@ -9,15 +9,29 @@
 # Setup for Capybara with Cucumber #
 
 ```
-1. $brew cask install chromedriver
-2. $gem install bundler
-3. $gem install cucumber
-4. $gem install rspec
-5. $cucumber --init         // Initialize cucumber project directory
-6. $rspec --init            // Initialize rspec project directory
-7. $bundle init
-8. $bundle install          // Install dependency mentioned in Gemfile
-8. $gem 'capybara-minitest' // for minitest 
+ $brew install ruby
+ $brew cask install chromedriver
+ $gem install bundler
+ $gem install cucumber
+ $gem install rspec
+ $cucumber --init         // Initialize cucumber project directory
+ $rspec --init            // Initialize rspec project directory
+ $bundle init
+ $bundle install          // Install dependency mentioned in Gemfile
+ $gem 'capybara-minitest' // for minitest 
+```
+## Update Path variables
+
+```
+export GEM_HOME="$HOME/.gem"
+export PATH="$GEM_HOME/bin:$PATH"
+
+export PATH="/usr/local/opt/ruby/bin:$PATH"
+
+export LDFLAGS="-L/usr/local/opt/ruby/lib"
+export CPPFLAGS="-I/usr/local/opt/ruby/include"
+
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
 ```
 
 # To Run the Tests 
