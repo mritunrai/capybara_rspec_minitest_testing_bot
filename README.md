@@ -36,16 +36,21 @@ $rake  runCucumberTest['mk']    // non zsh shell .
 ```
 
 # Allure Reporting Installation
-###### Add this line to your application's Gemfile:
 
+###### Add this line to your application's Gemfile
+
+```
 gem 'allure-cucumber'
 else  execute below command to install allure gem.
 
 $ gem install allure-cucumber
 
 Add below config into env.rb file.
+```
 
 ##### Allure
+
+```
 AllureCucumber.configure do |c|
   c.results_directory = "report/allure-results"
   c.clean_results_directory = true
@@ -54,17 +59,25 @@ AllureCucumber.configure do |c|
   c.tms_prefix = "TMS_"
   c.issue_prefix = "ISSUE_"
 end
+```
 
-## How to create report :
+## How to create allure report
+
+```
 $allure serve report/allure-results 
+```
 
 ## Running Rspec Test
+```
 $rspec spec/*.rb   // run all test in ruby files.
+
 $bundle exec rspec   // Running RSpec tests.
+```
 
 ## Setup Minitest Framework.
 - To run a Minitest test, the only setup you really need is to require the autorun file at the beginning of a test
-file:require 'minitest/autorun'
+ file:require 'minitest/autorun'
+ 
 - A better way to get started with Minitest is to have Bundler create a template project for you.
 ```
 $bundle gem myproject
@@ -78,7 +91,7 @@ test/test_helper.rb
 test/myproject_test.rb
 ```
 
-###### How to Run Test: $ruby <File path>
+###### How to Run Test: $ruby test/file_name.rb
 ###### Note: Ensure test should have prefix with “test_” , specially in case of creating for minitest.
 
 
