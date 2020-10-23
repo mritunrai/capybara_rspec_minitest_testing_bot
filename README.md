@@ -5,6 +5,17 @@
   - Allure Reprots
   - Run test using Rake Task
   - Failed Screenshot
+  
+# About multiple browser and Tag based Run
+
+We are supporitng following browser here 
+  - Chrome
+  - Headless browser
+  - Firefox
+  
+We can run test usign different browser using Rake Task  and pass browser name as parameter.
+additinally we can filter our test based on @tag defined on feature file. we can configure 
+@tag in task as well as in "cucumber.yml" file.
 
 # Setup for Capybara with Cucumber #
 
@@ -91,10 +102,14 @@ $allure serve report/allure-results
 ```
 
 ## Setup Minitest Framework.
-- To run a Minitest test, the only setup you really need is to require the autorun file at the beginning of a test
- file:require 'minitest/autorun'
+ To run a Minitest test, the only setup you really need is to require the autorun file at the beginning of a test
+ file.
  
-- A better way to get started with Minitest is to have Bundler create a template project for you.
+ ```
+ require 'minitest/autorun'
+ ```
+ 
+ A better way to get started with Minitest is to have Bundler create a template project for you.
 
 ```
 $bundle gem myproject
