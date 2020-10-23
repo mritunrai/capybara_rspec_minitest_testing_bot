@@ -85,9 +85,9 @@ $allure serve report/allure-results
 ## Running Rspec Test
 
 ```
-$rspec spec/*.rb     // run all test in ruby files.
+$ rspec spec/*.rb    
 
-$bundle exec rspec   // Running RSpec tests.
+$ bundle exec rspec
 ```
 
 ## Setup Minitest Framework.
@@ -95,12 +95,13 @@ $bundle exec rspec   // Running RSpec tests.
  file:require 'minitest/autorun'
  
 - A better way to get started with Minitest is to have Bundler create a template project for you.
+
 ```
 $bundle gem myproject
 ```
-###### bundle gem myproject
 
 There are three files generated that are specifically for your test suite:
+
 ```
 Rakefile
 test/test_helper.rb
