@@ -17,6 +17,11 @@ end
 
 When(/^I click on sign up button$/) do
   signup = Pages::SignUp.new
+  signup.click_on_signup
+end
+
+And(/^I Enter details for account creation$/) do
+  signup = Pages::SignUp.new
   signup.signup_github
 end
 

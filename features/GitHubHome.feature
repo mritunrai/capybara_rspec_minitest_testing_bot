@@ -16,3 +16,9 @@ Feature: Github homepage
     Given I am on github homepage
     When I click on sign up button
     Then the page should have "Create your account"
+
+    Scenario: Sign up to github page
+    Given I am on github homepage
+    When I click on sign up button
+    And I Enter details for account creation
+    Then the page should have "Create your account"
