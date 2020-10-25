@@ -16,9 +16,9 @@ task :clean do
 end
 
 Cucumber::Rake::Task.new(:run_features, "This is my cucumber rake task") do |t, args|
-  #t.profile = "runCucumberTest"
+  #t.profile = "runCucumberTest"   # comment below line of code to use this line of code.both have same purpose.
 
-  t.cucumber_opts = %w{--tags @regression}    # comment above line of code to use this.
+  t.cucumber_opts = %w{--tags @regression}
 end
 
 task :runCucumberTest, [:arg1] do |t, args|

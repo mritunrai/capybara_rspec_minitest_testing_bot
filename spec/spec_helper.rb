@@ -13,8 +13,6 @@ RSpec.configure do |config|
   config.include Capybara::DSL
 end
 
-ENV["BROWSER"] = "chrome"
-
 include Capybara::DSL
 
 Capybara.register_driver :chrome do |app|

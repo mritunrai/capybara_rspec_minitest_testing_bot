@@ -67,6 +67,7 @@ $rake  runCucumberTest['mk']    // non zsh shell .
 $ rspec spec/*.rb    
 
 $ bundle exec rspec
+$rake 'runRSpecTest['chrome']'
 ```
 
 # Allure Reporting Installation
